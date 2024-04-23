@@ -8,8 +8,6 @@ const Index = () => {
   const [language, setLanguage] = useState("javascript");
 
   const handleConvert = () => {
-    // This is a placeholder function for converting code
-    // In a real application, this would involve more complex logic or an API call
     if (language === "javascript") {
       setOutputCode(
         inputCode
@@ -33,7 +31,7 @@ const Index = () => {
         <Select placeholder="Select language" value={language} onChange={(e) => setLanguage(e.target.value)}>
           <option value="javascript">JavaScript</option>
           <option value="java">Java</option>
-          {/* Add more languages as needed */}
+          {}
         </Select>
         <Textarea placeholder="Enter your code here..." value={inputCode} onChange={(e) => setInputCode(e.target.value)} size="lg" />
         <Button rightIcon={<FaExchangeAlt />} colorScheme="teal" onClick={handleConvert}>
